@@ -21,11 +21,13 @@ export default function App() {
 
   return (
     <div className="traffic-light">
-      <div className={`red light ${color === "red" ? "active" : ""}`}></div>
+      <div className={`dim light ${color === "red" ? "activeRed" : ""}`}></div>
       <div
-        className={`yellow light ${color === "yellow" ? "active" : ""}`}
+        className={`dim light ${color === "yellow" ? "activeYellow" : ""}`}
       ></div>
-      <div className={`green light ${color === "green" ? "active" : ""}`}></div>
+      <div
+        className={`dim light ${color === "green" ? "activeGreen" : ""}`}
+      ></div>
     </div>
   );
 }
