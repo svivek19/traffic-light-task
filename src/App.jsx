@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import { useEffect } from "react";
 
-export default function App() {
+const App = () => {
   const [color, setColor] = useState("red");
 
   useEffect(() => {
@@ -20,7 +19,7 @@ export default function App() {
   }, [color]);
 
   return (
-    <div className="traffic-light">
+    <div className="main">
       <div className={`dim light ${color === "red" ? "activeRed" : ""}`}></div>
       <div
         className={`dim light ${color === "yellow" ? "activeYellow" : ""}`}
@@ -30,4 +29,6 @@ export default function App() {
       ></div>
     </div>
   );
-}
+};
+
+export default App;
